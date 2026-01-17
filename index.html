@@ -77,19 +77,25 @@
       transform: rotate(-45deg);
       animation: float 5s linear forwards;
     }
-    .heart::before, .heart::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff69b4;
-      border-radius: 50%;
-    }
-    .heart::before { top: -10px; left: 0; }
-    .heart::after { left: 10px; top: 0; }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(-45deg); opacity:1; }
-      100% { transform: translateY(-600px) rotate(-45deg); opacity:0; }
+    /* Update .heart */
+.heart {
+  position: fixed; /* make it fixed relative to viewport for floating animation */
+  width: 20px;
+  height: 20px;
+  background-color: #ff69b4;
+  transform: rotate(-45deg);
+  animation: float 5s linear forwards;
+}
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+}
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: 10px; top: 0; }
     }
     audio { display:none; }
   </style>
@@ -145,20 +151,18 @@
 
   <div id="gift4" class="content">
     <h2>A Message For You</h2>
-    <p>From the moment you came into my life, things started to feel different in the best way i couldve never imagined. I dont think i ever really believed that someone could change your day just by being there, but you proved that to me without even trying. Somehow, the smallest things and moments with you ended up being the ones i truly remember_your laugh, your smile, your eyes, the quiet times we share, the small but full of effort gifts, everything really. Those moments may not be special in other peoples eyes, but for me those moments mean the world to me.
+    <p>From the moment you came into my life, things started to feel different in the best way i couldve never imagined. I dont think i ever really believed that someone could change your day just by being there, but you proved that to me without even trying. Somehow, the smallest things and moments with you ended up being the ones i truly remember_your laugh, your smile, your eyes, the quiet times we share, the small but full of effort gifts, everything really. Those moments may not be special in other peoples eyes, but for me those moments mean the world to me.</p>
+<p>I made this website because i really dont have the money to do smth extravagant so i went to do smth that took time and effort instead. Every code nor word i typed for this is all for you, because youre someone special and appreciated, i truly care about you and im grateful more than i probably say out loud.</p>
 
 
-I made this website because i really dont have the money to do smth extravagant so i went to do smth that took time and effort instead. Every code nor word i typed for this is all for you, because youre someone special and appreciated, i truly care about you and im grateful more than i probably say out loud.
+<p>I love you, I love you just the way you are. You make me feel comfy, happy, and understood in a way thats hard to explain. Being with you feels calm and peaceful, something that just makes sense. You inspire me to be better, to try harder everyday, and i love you for that. I love everything about you.</p>
 
 
-I love you, I love you just the way you are. You make me feel comfy, happy, and understood in a way thats hard to explain. Being with you feels calm and peaceful, something that just makes sense. You inspire me to be better, to try harder everyday, and i love you for that. I love everything about you.
+<p>Thank you for being really really really patient with me, for treating me well, for always understanding me, and for being yourself. Thank you for the memories we have already made and for the ones we will make. No matter where we are, what we are doing, nothing feels more meaningful than me spending time with you.</p>
 
 
-Thank you for being really really really patient with me, for treating me well, for always understanding me, and for being yourself. Thank you for the memories we have already made and for the ones we will make. No matter where we are, what we are doing, nothing feels more meaningful than me spending time with you. 
-
-
-As February 14 gets closer (and the exam too which btw goodluckkk babyyy) I couldnt help but think how much i wanna share that day with you. So after everything ive said, theres just one more thing i want to ask you from the bottom of my heart.. Louch, I would be honored to be accompanied by your presence on this upcoming Valentines day, will you make me the happiest and luckiest woman on earth by being my valentine?</p>
-    <button class="content-btn" onclick="showHearts(); alert('YAY!! 💖 Be my Valentine!')">YES</button>
+<p>As February 14 gets closer (and the exam too which btw goodluckkk babyyy) I couldnt help but think how much i wanna share that day with you. So after everything ive said, theres just one more thing i want to ask you from the bottom of my heart.. Louch, I would be honored to be accompanied by your presence on this upcoming Valentines day, will you make me the happiest and luckiest woman on earth by being my valentine?</p>
+    <button class="content-btn" onclick="showHearts(); alert('YAY!!)">YES</button>
   </div>
 </div>
 
@@ -216,4 +220,5 @@ function showHearts() {
 
 </body>
 </html>
+
 
