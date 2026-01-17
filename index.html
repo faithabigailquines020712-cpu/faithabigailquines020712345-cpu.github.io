@@ -89,11 +89,16 @@
 
 .heart::before { top: -50%; left: 0; }
 .heart::after { left: 50%; top: 0; }
-}
-    
+}  
     @keyframes float {
-  0% { transform: translateY(0) rotate(-45deg); opacity:1; }
-  100% { transform: translateY(-600px) rotate(-45deg); opacity:0; }
+  from {
+    bottom: -50px;
+    opacity: 1;
+  }
+  to {
+    bottom: 110%;
+    opacity: 0;
+  }
     }
     audio { display:none; }
   </style>
@@ -218,6 +223,7 @@ function showHearts() {
 
 </body>
 </html>
+
 
 
 
