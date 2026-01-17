@@ -72,8 +72,6 @@
 .heart {
   position: fixed;
   background-color: #ff69b4;
-  width: 30px;
-  height: 30px;
   transform: rotate(-45deg);
   animation: float 6s linear forwards;
   z-index: 9999;
@@ -91,17 +89,17 @@
 
 .heart::before { top: -50%; left: 0; }
 .heart::after { left: 50%; top: 0; }
-}  
-    @keyframes float {
+
+@keyframes float {
   from {
-    bottom: -50px;
+    bottom: -60px;
     opacity: 1;
   }
   to {
     bottom: 110%;
     opacity: 0;
   }
-    }
+}
     audio { display:none; }
   </style>
 </head>
@@ -210,7 +208,7 @@ function showHearts() {
     heart.style.left = Math.random()*pageWidth + "px";
 
     // Random position across full height of page
-    heart.style.top = window.innerHeight + "px"; // start from bottom of screen
+    heart.style.bottom = "-60px"; // start from bottom of screen
 
     // Random animation duration
     heart.style.animationDuration = 5 + Math.random()*5 + "s";
@@ -225,6 +223,7 @@ function showHearts() {
 
 </body>
 </html>
+
 
 
 
