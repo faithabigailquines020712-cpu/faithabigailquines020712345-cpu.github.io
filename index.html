@@ -78,24 +78,24 @@
       animation: float 5s linear forwards;
     }
     /* Update .heart */
-.heart {
-  position: fixed; /* make it fixed relative to viewport for floating animation */
-  width: 20px;
-  height: 20px;
-  background-color: #ff69b4;
-  transform: rotate(-45deg);
-  animation: float 5s linear forwards;
-}
-.heart::before, .heart::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ff69b4;
-  border-radius: 50%;
-}
-.heart::before { top: -10px; left: 0; }
-.heart::after { left: 10px; top: 0; }
+    .heart {
+      position: fixed; /* make it fixed relative to viewport for floating animation */
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      transform: rotate(-45deg);
+      animation: float 5s linear forwards;
+   }
+   .heart::before, .heart::after {
+     content: "";
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     background-color: #ff69b4;
+     border-radius: 50%;
+   }
+   .heart::before { top: -10px; left: 0; }
+   .heart::after { left: 10px; top: 0; }
     }
     audio { display:none; }
   </style>
@@ -220,5 +220,6 @@ function showHearts() {
 
 </body>
 </html>
+
 
 
