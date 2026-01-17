@@ -69,23 +69,15 @@
       color:white;
     }
     /* Floating hearts */
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff69b4;
-      transform: rotate(-45deg);
-      animation: float 5s linear forwards;
-   }
-   .heart::before, .heart::after {
-     content: "";
-     position: absolute;
-     width: 20px;
-     height: 20px;
-     background-color: #ff69b4;
-     border-radius: 50%;
-   }
-   .heart::before,
+.heart {
+  position: fixed; /* ALWAYS visible on screen */
+  background-color: #ff69b4;
+  transform: rotate(-45deg);
+  animation: float 6s linear forwards;
+  z-index: 9999;
+}
+
+.heart::before,
 .heart::after {
   content: "";
   position: absolute;
@@ -93,6 +85,10 @@
   height: 100%;
   background-color: #ff69b4;
   border-radius: 50%;
+}
+
+.heart::before { top: -50%; left: 0; }
+.heart::after { left: 50%; top: 0; }
 }
     
     @keyframes float {
@@ -207,7 +203,7 @@ function showHearts() {
     heart.style.left = Math.random()*pageWidth + "px";
 
     // Random position across full height of page
-    heart.style.top = Math.random()*pageHeight + "px";
+    heart.style.top = window.innerHeight + "px"; // start from bottom of screen
 
     // Random animation duration
     heart.style.animationDuration = 5 + Math.random()*5 + "s";
@@ -222,6 +218,7 @@ function showHearts() {
 
 </body>
 </html>
+
 
 
 
