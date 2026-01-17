@@ -205,7 +205,7 @@ function showHearts() {
     heart.style.height = size + "px";
 
     // Random position across full width
-    heart.style.left = Math.random()*pageWidth + "px";
+    heart.style.left = Math.random() * (pageWidth - size) + "px";
 
     // Random position across full height of page
     heart.style.bottom = "-60px"; // start from bottom of screen
@@ -223,6 +223,7 @@ function showHearts() {
 
 </body>
 </html>
+
 
 
 
